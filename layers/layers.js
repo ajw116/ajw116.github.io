@@ -5,69 +5,6 @@ new ol.layer.Tile({
     'title': 'OSM',
     'type': 'base',
     source: new ol.source.OSM()
-}),
-new ol.layer.Tile({
-    'title': 'OSM DE',
-    'type': 'base',
-    source: new ol.source.XYZ({
-        url: 'http://tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png',
-        attributions: [new ol.Attribution({html: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'})]
-    })
-}),
-new ol.layer.Tile({
-    'title': 'Thunderforest Cycle',
-    'type': 'base',
-    source: new ol.source.XYZ({
-        url: 'http://tile.thunderforest.com/cycle/{z}/{x}/{y}.png',
-        attributions: [new ol.Attribution({html: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>,&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'})]
-    })
-}),
-new ol.layer.Tile({
-    'title': 'Thunderforest Outdoors',
-    'type': 'base',
-    source: new ol.source.XYZ({
-        url: 'http://tile.thunderforest.com/outdoors/{z}/{x}/{y}.png',
-        attributions: [new ol.Attribution({html: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>,&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'})]
-    })
-}),
-new ol.layer.Tile({
-    'title': 'OpenMapSurfer Roads',
-    'type': 'base',
-    source: new ol.source.XYZ({
-        url: 'http://openmapsurfer.uni-hd.de/tiles/roads/x={x}&y={y}&z={z}',
-        attributions: [new ol.Attribution({html: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @University of Heidelberg</a> &mdash; Map data:&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'})]
-    })
-}),
-new ol.layer.Tile({
-    'title': 'OpenMapSurfer adminb',
-    'type': 'base',
-    source: new ol.source.XYZ({
-        url: 'http://openmapsurfer.uni-hd.de/tiles/adminb/x={x}&y={y}&z={z}',
-        attributions: [new ol.Attribution({html: 'Imagery from <a href="http://giscience.uni-hd.de/">GIScience Research Group @University of Heidelberg</a> &mdash; Map data:&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>'})]
-    })
-}),
-new ol.layer.Tile({
-    'title': 'OpenWeatherMap Wind',
-    'type': 'base',
-    source: new ol.source.XYZ({
-        url: 'http://tile.openweathermap.org/map/wind/{z}/{x}/{y}.png',
-        attributions: [new ol.Attribution({html: 'Map data &copy; <a href="http://openweathermap.org">OpenWeatherMap</a>'})]
-    })
-}),
-new ol.layer.Tile({
-    'title': 'OpenWeatherMap Pressure',
-    'type': 'base',
-    source: new ol.source.XYZ({
-        url: 'http://tile.openweathermap.org/map/pressure/{z}/{x}/{y}.png',
-        attributions: [new ol.Attribution({html: 'Map data &copy; <a href="http://openweathermap.org">OpenWeatherMap</a>'})]
-    })
-}),
-new ol.layer.Tile({
-    'title': 'Stamen Terrain',
-    'type': 'base',
-    source: new ol.source.Stamen({
-        layer: 'terrain'
-    })
 })
 ]
 });
