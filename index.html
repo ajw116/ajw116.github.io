@@ -59,6 +59,21 @@
             maxZoom: 13
         });
         basemap0.addTo(map);
+        var basemap1 = L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>,&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            maxZoom: 13
+        });
+        basemap1.addTo(map);
+        var basemap2 = L.tileLayer('http://a.tile.stamen.com/watercolor/{z}/{x}/{y}.png', {
+            attribution: 'Map tiles by <a href="http://stamen.com">Stamen Design</a>,<a href="http://creativecommons.org/licenses/by/3.0">CC BY 3.0</a> &mdash;Map data: &copy; <a href="http://openstreetmap.org">OpenStreetMap</a>contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
+            maxZoom: 13
+        });
+        basemap2.addTo(map);
+        var basemap3 = L.tileLayer('http://{s}.tile.openstreetmap.fr/hot/{z}/{x}/{y}.png', {
+            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>,Tiles courtesy of <a href="http://hot.openstreetmap.org/" target="_blank">Humanitarian OpenStreetMap Team</a>',
+            maxZoom: 13
+        });
+        basemap3.addTo(map);
         function setBounds() {
             if (bounds_group.getLayers().length) {
                 map.fitBounds(bounds_group.getBounds());
@@ -131,7 +146,7 @@
             text: 'Search',
         });
         osmGeocoder.addTo(map);
-        var baseMaps = {'OSM': basemap0};
+        var baseMaps = {'OSM': basemap0, 'Thunderforest Landscape': basemap1, 'Stamen Watercolor': basemap2, 'OSM HOT': basemap3};
         L.control.layers(baseMaps,{'<img src="legend/OtagoRC1.png" /> OtagoRC': json_OtagoRC1JSON,'<img src="legend/LakesOtago0.png" /> LakesOtago': json_LakesOtago0JSON,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
