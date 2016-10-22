@@ -1,4 +1,4 @@
-var json_OtagoRC1={
+var geojson_OtagoRC = {
 "type": "FeatureCollection",
 "crs": { "type": "name", "properties": { "name": "urn:ogc:def:crs:OGC:1.3:CRS84" } },
                                                                                 
