@@ -31,15 +31,7 @@ new ol.layer.Tile({
 })
 ]
 });
-var format_LakesOtago = new ol.format.GeoJSON();
-var features_LakesOtago = format_LakesOtago.readFeatures(geojson_LakesOtago, 
-            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
-var jsonSource_LakesOtago = new ol.source.Vector();
-jsonSource_LakesOtago.addFeatures(features_LakesOtago);var lyr_LakesOtago = new ol.layer.Vector({
-                source:jsonSource_LakesOtago, 
-                style: style_LakesOtago,
-                title: "LakesOtago"
-            });var format_OtagoRC = new ol.format.GeoJSON();
+var format_OtagoRC = new ol.format.GeoJSON();
 var features_OtagoRC = format_OtagoRC.readFeatures(geojson_OtagoRC, 
             {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
 var jsonSource_OtagoRC = new ol.source.Vector();
@@ -47,13 +39,21 @@ jsonSource_OtagoRC.addFeatures(features_OtagoRC);var lyr_OtagoRC = new ol.layer.
                 source:jsonSource_OtagoRC, 
                 style: style_OtagoRC,
                 title: "OtagoRC"
+            });var format_OtagoLakes = new ol.format.GeoJSON();
+var features_OtagoLakes = format_OtagoLakes.readFeatures(geojson_OtagoLakes, 
+            {dataProjection: 'EPSG:4326', featureProjection: 'EPSG:3857'});
+var jsonSource_OtagoLakes = new ol.source.Vector();
+jsonSource_OtagoLakes.addFeatures(features_OtagoLakes);var lyr_OtagoLakes = new ol.layer.Vector({
+                source:jsonSource_OtagoLakes, 
+                style: style_OtagoLakes,
+                title: "OtagoLakes"
             });
 
-lyr_LakesOtago.setVisible(true);lyr_OtagoRC.setVisible(true);
-var layersList = [baseLayer,lyr_LakesOtago,lyr_OtagoRC];
-lyr_LakesOtago.set('fieldAliases', {'Lake': 'Lake', 'MainCatch': 'MainCatch', 'Methods': 'Methods', 'MoreInfo': 'MoreInfo', });
+lyr_OtagoRC.setVisible(true);lyr_OtagoLakes.setVisible(true);
+var layersList = [baseLayer,lyr_OtagoRC,lyr_OtagoLakes];
 lyr_OtagoRC.set('fieldAliases', {'RegionalC': 'RegionalC', });
-lyr_LakesOtago.set('fieldImages', {'Lake': 'TextEdit', 'MainCatch': 'TextEdit', 'Methods': 'TextEdit', 'MoreInfo': 'TextEdit', });
+lyr_OtagoLakes.set('fieldAliases', {'Lake': 'Lake', 'MainCatch': 'MainCatch', 'Methods': 'Methods', 'MoreInfo': 'MoreInfo', });
 lyr_OtagoRC.set('fieldImages', {'RegionalC': 'TextEdit', });
-lyr_LakesOtago.set('fieldLabels', {'Lake': 'header label', 'MainCatch': 'header label', 'Methods': 'header label', 'MoreInfo': 'header label', });
+lyr_OtagoLakes.set('fieldImages', {'Lake': 'TextEdit', 'MainCatch': 'TextEdit', 'Methods': 'TextEdit', 'MoreInfo': 'TextEdit', });
 lyr_OtagoRC.set('fieldLabels', {'RegionalC': 'no label', });
+lyr_OtagoLakes.set('fieldLabels', {'Lake': 'header label', 'MainCatch': 'header label', 'Methods': 'header label', 'MoreInfo': 'header label', });
