@@ -69,16 +69,11 @@
             maxZoom: 13
         });
         basemap2.addTo(map);
-        var basemap3 = L.tileLayer('http://{s}.tile.openstreetmap.de/tiles/osmde/{z}/{x}/{y}.png', {
-            attribution: '&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
-            maxZoom: 13
-        });
-        basemap3.addTo(map);
-        var basemap4 = L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
+        var basemap3 = L.tileLayer('http://{s}.tile.thunderforest.com/landscape/{z}/{x}/{y}.png', {
             attribution: '&copy; <a href="http://www.opencyclemap.org">OpenCycleMap</a>,&copy; <a href="http://openstreetmap.org">OpenStreetMap</a> contributors,<a href="http://creativecommons.org/licenses/by-sa/2.0/">CC-BY-SA</a>',
             maxZoom: 13
         });
-        basemap4.addTo(map);
+        basemap3.addTo(map);
         function setBounds() {
             if (bounds_group.getLayers().length) {
                 map.fitBounds(bounds_group.getBounds());
@@ -107,8 +102,8 @@
                 dashArray: '',
                 lineCap: 'square',
                 lineJoin: 'bevel',
-                opacity: 0.725490196078,
-                fillOpacity: 0.725490196078
+                opacity: 0.72549,
+                fillOpacity: 0.72549
             };
         }
         map.createPane('pane_LakesOtago0');
@@ -152,7 +147,7 @@
             text: 'Search',
         });
         osmGeocoder.addTo(map);
-        var baseMaps = {'Stamen Watercolor': basemap0, 'OSM': basemap1, 'OSM HOT': basemap2, 'OSM DE': basemap3, 'Thunderforest Landscape': basemap4};
+        var baseMaps = {'Stamen Watercolor': basemap0, 'OSM': basemap1, 'OSM HOT': basemap2, 'Thunderforest Landscape': basemap3};
         L.control.layers(baseMaps,{'<img src="legend/OtagoRC1.png" /> OtagoRC': json_OtagoRC1JSON,'<img src="legend/LakesOtago0.png" /> LakesOtago': json_LakesOtago0JSON,},{collapsed:false}).addTo(map);
         setBounds();
         </script>
